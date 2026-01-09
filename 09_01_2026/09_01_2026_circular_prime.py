@@ -1,6 +1,3 @@
-import math
-
-
 def is_prime(n):
     """
     Verify if a number is prime
@@ -15,15 +12,13 @@ def is_prime(n):
     """
     if n <= 1:
         return False
-
-    for i in range(2, int(math.sqrt(n)) + 1):
+    for i in range(2, int(n ** 0.5) + 1):
         if n % i == 0:
             return False
-    
     return True
 
 
-def circular_number(n):
+def circular_rotation(n):
     """
     Yield a list of circular permuatation of a number
 
@@ -41,8 +36,8 @@ def circular_number(n):
     for i in range(len(s)):
         s = s[1:] + s[0]
         tab.append(int(s))
-    
     return tab
+
 
 def is_circular_prime(n):
     """
@@ -54,16 +49,14 @@ def is_circular_prime(n):
     n (int) : Number to test
 
     Return : 
-    bool : True if all circular number are prime , False otherwise 
+    bool : True if all rotations of n are prime , False if not 
     """
-    for i in circular_number(n):
-        if not is_prime(i):
-            return False
-    return True
+    if not is_prime(n):
+        return False
+    return all(is_prime(i) for i in circular_rotation(n))
+
 
 if __name__ == "__main__":
-    print(is_circular_prime(197))
-    print(is_circular_prime(23))
-    print(is_circular_prime(13))
-    print(is_circular_prime(89))
-    print(is_circular_prime(1193))
+    test_numbers = [197, 23, 13, 89, 1193]
+    for number in test_numbers:
+        print(f"{number} => {is_circular_prime(number)}")   
