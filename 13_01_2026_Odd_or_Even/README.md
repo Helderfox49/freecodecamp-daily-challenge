@@ -1,10 +1,8 @@
 # Day Challenge: Odd or Even ?
----
 
 ## Assigment
 
 Given a positive integer, return `"Odd"` if it's an odd number, and `"Even"` is it's even.
----
 
 ## Tests & Resuls Attended
 
