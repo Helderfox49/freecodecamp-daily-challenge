@@ -4,8 +4,8 @@
 
 Given an integer representing the size of your farm field, and `"acres"` or "`hectares"` representing the unit for the size of your farm field, and a type of crop, determine how many plants of that type you can fit in your field.
 
-    * 1 acre equals 4046.86 square meters.
-    * 1 hectare equals 10,000 square meters.
+* 1 acre equals 4046.86 square meters.
+* 1 hectare equals 10,000 square meters.
 
 Here's a list of crops that will be given as input and how much space a single plant takes:
 
