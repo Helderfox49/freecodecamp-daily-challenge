@@ -1,4 +1,3 @@
-import math
 def get_number_of_plants(field_size, unit, crop):
 
     # Conversion to squares meters
