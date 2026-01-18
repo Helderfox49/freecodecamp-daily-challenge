@@ -3,3 +3,4 @@ def odd_or_even(n):
         return "Even"
     else:
         return "Odd" 
+        
