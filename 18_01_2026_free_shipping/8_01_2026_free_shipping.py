@@ -8,12 +8,9 @@ def gets_free_shipping(cart, minimum):
         "jacket": 109.95
     }
 
-    total = sum(prices[item] for item in prices)
+    total = sum(prices[item] for item in cart)
     
-    if total < minimum:
-        return False
-    else:
-        return True
+    return total >= minimum
 
 
 if __name__ == "__main__":
